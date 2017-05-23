@@ -1,0 +1,37 @@
+footer{
+    width: calc(100% - 120px);
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 $pad*2;
+    margin-top: $pad*2;
+    color: $color-white;
+    text-align: right;
+    font-size: .7rem;
+    a, p, li{
+	    font-size: .7rem; 
+	    line-height: 1rem;
+    }
+	div.wrapper{
+		div.contact{
+			ul{
+				li{
+					a{
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+		div.social{
+			ul{
+				li{
+					display: inline-block;
+					padding-right: 15px;
+					@include opacity(.6);
+				}
+			}
+		}
+	}
+}

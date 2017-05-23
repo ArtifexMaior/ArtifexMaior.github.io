@@ -1,0 +1,70 @@
+section[role=post-list]{
+	max-width: 600px;
+	margin-bottom: 350px!important;
+	h1.page-heading{
+		margin-bottom: 2rem;
+	}
+	ul.post-list{
+		li{
+			margin-bottom: $pad*2;
+			span{
+				color: $color-gray-dark;
+				font-size: .8rem;
+				top: -7px;
+				position: relative;
+			}
+			a.more{
+				text-transform: uppercase;
+				color: $color-seaweed;
+			}
+			&:after{
+				content: '';
+				width: 150px;
+				border-bottom: 2px solid $color-gray;
+				display: block;
+				margin-top: $pad*1.5;
+			}
+			&:last-child{
+				margin-bottom: $pad*3;
+				&:after{
+					display: none;
+				}
+			}
+		}
+	}
+	div.pagination{
+		span, a{
+			text-transform: uppercase;
+			&.inactive{
+				@include opacity(.6);
+			}
+			
+		}
+		em{
+			display: inline-block;
+			background-color: $color-seaweed;
+			width: 35px;
+			height: 35px;
+			color: $color-white;
+			text-align: center;
+		}
+		.prev{
+			margin-right: $pad/2;
+		}
+		.next{
+			margin-left: $pad/2;
+		}
+		.number{
+			margin-right: $pad/3;
+		}
+	}
+}
+@include breakpoint(mobile){
+	section[role=post-list]{
+		ul.post-list{
+			li{
+				margin-bottom: $pad;
+			}
+		}
+	}
+}

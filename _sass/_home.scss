@@ -1,0 +1,30 @@
+.page-content.home{
+	min-height: 100vh;
+	position: relative;
+	.home-image{
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		opacity: .5;
+		width: 25%;
+	}
+	.wrapper{
+		padding: 0 $pad*2;
+		position: relative;
+		min-height: 100vh;
+		h2{
+			right: 10%;
+			font-size: 3rem;
+			line-height: 2.5rem;
+			span{
+				font-size: 3rem;
+				line-height: 2.5rem;
+			}
+			position: absolute;
+			z-index: 100;
+			max-width: 650px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}

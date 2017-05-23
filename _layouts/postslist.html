@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        
+        <section role="post-list">
+			<h1 class="page-heading">Blog</h1>
+			<ul class="post-list">
+		
+				{% for post in paginator.posts %}
+					
+					<li>
+						<h2>
+							<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+						</h2>
+						<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} {% if post.author %}• {{ post.author }} {% endif %}</span>
+						<p>{{ post.excerpt }}</p>
+						<a class="more" href="{{ post.url | prepend: site.baseurl }}">Read More &raquo;</a>
+						
+					</li>
+					
+				{% endfor %}
+				
+				{% if paginator.total_pages > 1 %}
+					<div class="pagination">
+						{% if paginator.previous_page %}
+					    	<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="prev">&laquo; Prev</a>
+							{% else %}
+							<span class="inactive prev">&laquo; Prev</span>
+						{% endif %}
+					
+						{% for page in (1..paginator.total_pages) %}
+						    {% if page == paginator.page %}
+						      <em class="number">{{ page }}</em>
+						    {% elsif page == 1 %}
+						      <a href="{{ '/blog/index.html' | prepend: site.baseurl | replace: '//', '/' }}" class="number">{{ page }}</a>
+						    {% else %}
+						      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="number">{{ page }}</a>
+						    {% endif %}
+						{% endfor %}
+					
+						{% if paginator.next_page %}
+							<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="next">Next &raquo;</a>
+							{% else %}
+							<span class="inactive next">Next &raquo;</span>
+						{% endif %}
+					</div>
+				{% endif %}
+				
+			</ul>
+		</section>
+        
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

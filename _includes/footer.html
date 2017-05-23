@@ -1,0 +1,19 @@
+<footer class="site-footer">
+	<div class="wrapper">
+		<div class="contact">
+			<div>
+			<ul>
+<!-- 				<li><a href="{{ site.baseurl }}">{{ site.title }}</a></li> -->
+				<li><p>{{ site.description }} <br>&copy; {{ site.time | date: '%Y' }} Demetri Sofides</p></li>
+			</ul>
+		</div>
+		<div class="social">
+			<ul>
+				<li><a href="mailto:{{ site.email }}" target="_blank"><i class="icon small email"></i></a></li>
+				<li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank"><i class="icon small rss"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	<script src="{{ "/js/plugins.js" | prepend: site.baseurl }}"></script>
+	<script src="{{ "/js/base.js" | prepend: site.baseurl }}"></script>
+</footer>

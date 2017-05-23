@@ -1,0 +1,33 @@
+header:not(.post-header){
+	min-height: 100px;
+	position: fixed;
+	z-index: 1000;
+	top: $pad*1.5;
+	width: calc(100% - 120px);
+	.title{
+		height: 100%;
+		position: relative;
+		float: left;
+		a{
+			letter-spacing: .075rem;
+			font-size: 1.5rem;
+		}
+	}
+	.navigation{
+		float: right;
+		nav{
+			ul{
+				li{
+					display: inline-block;
+					a{
+						padding: .5rem;
+						letter-spacing: .05rem;
+						&:hover{
+							cursor: url(../assets/ui/plus-cursor.png) 50 50, auto;
+						}
+					}					
+				}
+			}
+		}
+	}
+}

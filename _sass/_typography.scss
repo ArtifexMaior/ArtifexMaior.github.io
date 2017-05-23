@@ -1,0 +1,110 @@
+html {
+	font-size: 18px;
+	@include breakpoint(large){font-size: 17px;}
+	@include breakpoint(small){font-size: 16px;}
+	@include breakpoint(tablet){font-size: 16px;}
+	@include breakpoint(mobile){font-size: 14px;}
+	font-family: $main-font;
+}
+
+h1, h2, h3, h4, h5, span {
+	font-family: $headline-font;
+	color: $color-white;
+	letter-spacing: 1px;
+}
+
+h1 {
+	font-size: 1.75rem;
+	a{
+		font-size: 1.75rem;
+	}
+}
+
+h2 {
+	font-size: 1.25rem;
+	a{
+			font-size: 1.25rem;
+		}
+}
+
+h3 {
+	font-size: .9rem;
+}
+h4{
+	font-size: 1.25rem;
+	a{
+		font-size: 1.25rem;
+	}
+}
+
+p, ul, ol, span, a {
+	font-family: $main-font;
+	margin: 1rem 0;
+	font-weight: 100;
+	font-size: 1rem;
+	line-height: 2rem;
+	color: $color-white;
+}
+
+em, .ital{
+	font-style: italic;
+}
+ul {
+	margin: 0;
+}
+article.post{
+	ul{
+		list-style: disc;
+		li{
+			margin-left: 15px;
+		}
+	}
+	span.caption{
+		display: block;
+		font-style: italic;
+		font-size: .8rem;
+		margin-top: -20px;
+		line-height: 1.25rem;
+	}
+}
+strong {
+	font-weight: 700;
+}
+
+a {
+	font-family: $headline-font;
+	color: $color-white;
+	@include transition( opacity $fast ease-in-out);
+	text-decoration: none;
+	&:hover{
+		cursor: pointer;
+		opacity: .6;
+	}
+}
+code{
+	font-family: monospace, serif;
+	font-size: 1em;
+	margin: 1.5em 0em;
+	width: 90%;
+	display: block;
+	background-color: #fafafa;
+	padding: 15px 5% 30px 5%;
+	white-space: nowrap;
+	overflow-x: auto;
+	&::-webkit-scrollbar:horizontal {
+		display: block;
+	}
+	pre{
+		margin-right: $pad/2;
+	}
+}
+.source-quote{
+	font-family: $main-font;
+	font-style: italic;
+	font-size: 1em;
+	margin: 1.5em 0em;
+	width: 90%;
+	display: block;
+	background-color: #fafafa;
+	padding: 15px 5%;
+}
