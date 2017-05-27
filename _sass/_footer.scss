@@ -16,11 +16,22 @@ footer{
     }
 	div.wrapper{
 		div.contact{
+			width: auto;
+			display: block;
+			float: right;
+			clear: both;
+			
 			ul{
+// 				background-color: $color-black;
+				padding: $pad/2;
+				margin-bottom: $pad;
 				li{
 					a{
 						text-transform: uppercase;
 					}
+				}
+				p{
+					margin: 0;
 				}
 			}
 		}
