@@ -15,6 +15,7 @@ footer{
 	    line-height: 1rem;
     }
 	div.wrapper{
+		overflow: auto;
 		div.contact{
 			width: auto;
 			display: block;
@@ -41,6 +42,20 @@ footer{
 					display: inline-block;
 					padding-right: 15px;
 					@include opacity(.6);
+				}
+			}
+		}
+	}
+}
+@include breakpoint(mobile){
+	footer{
+		text-align: center;
+		background-color: $color-black;
+		div.wrapper{
+			div.contact{
+				float: none;
+				ul{
+					margin-bottom: 10px;
 				}
 			}
 		}

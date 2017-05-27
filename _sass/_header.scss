@@ -1,4 +1,4 @@
-header:not(.post-header){
+header{
 	min-height: 100px;
 	position: fixed;
 	z-index: 1000;
@@ -36,6 +36,25 @@ header:not(.post-header){
 					}					
 				}
 			}
+		}
+	}
+}
+@include breakpoint(mobile){
+	header{
+		width: calc( 100% + 15px);
+		top: 0;
+		left: -$pad/2;
+		.title{
+			width: 100%;
+			text-align: center;
+			left: 0;
+			padding: $pad*1.5 0 0 0;
+		}
+		.navigation{
+			float: none;
+			padding: 0 0 $pad/2 0;
+			margin: 0;
+			text-align: center;
 		}
 	}
 }

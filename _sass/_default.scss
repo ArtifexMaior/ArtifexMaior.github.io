@@ -1,8 +1,15 @@
 .page-content.default{
-	padding: $pad*5 5%;
+	padding: $pad*5 5% $pad 5%;
 	.wrapper.default{
 		max-width: 500px;
 		margin: 0 auto;
 		padding: 0 $pad*1.5;
+	}
+}
+@include breakpoint(mobile){
+	.page-content.default{
+		.wrapper.default{
+			padding: 0 $pad/2;
+		}
 	}
 }
