@@ -8,6 +8,10 @@ header:not(.post-header){
 		height: 100%;
 		position: relative;
 		float: left;
+		padding: $pad/2;
+		top: -$pad/2;
+		left: -$pad/2;
+		background-color: $color-black;
 		a{
 			letter-spacing: .075rem;
 			font-size: 1.5rem;
@@ -15,6 +19,10 @@ header:not(.post-header){
 	}
 	.navigation{
 		float: right;
+		padding: 15px;
+		margin-top: -$pad/2;
+		margin-right: -$pad/2;
+		background-color: $color-black;
 		nav{
 			ul{
 				li{

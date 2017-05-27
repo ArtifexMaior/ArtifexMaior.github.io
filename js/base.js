@@ -1,5 +1,38 @@
 function init(){
 	$('body').addClass('loading');
+	
+}
+$(document).ready(function(){
+	init();
+	
+
+	$(".fancybox").fancybox({
+		beforeShow: function () {
+            $.fancybox.wrap.bind("contextmenu", function (e) {
+                    return false; 
+            });
+        },
+        openEffect  : 'fade',
+        closeSpeed	: 500,
+        openSpeed	: 500,
+        closeBtn	: true,
+        modal	: false,
+        padding	:	0,
+	    helpers:  {
+	        overlay : {
+	            css : {
+	                'background' : 'rgba(0,0,0,0.9)'
+	            }
+	        }
+	    }
+	});
+	
+});
+$(document).keypress(function(e){
+
+});
+$(window).load(function(){
+	$('body').addClass('loaded');
 	$('.textillate').textillate({
 		in: {
 			// set the effect name
@@ -16,39 +49,4 @@ function init(){
 		},
 		type: 'word'
 	});
-}
-$(document).ready(function(){
-	init();
-	// pretty menu button
-	
-
-/*
-	$(".fancybox").fancybox({
-		beforeShow: function () {
-            $.fancybox.wrap.bind("contextmenu", function (e) {
-                    return false; 
-            });
-        },
-        openEffect  : 'fade',
-        closeSpeed	: 500,
-        openSpeed	: 500,
-        closeBtn	: true,
-        modal	: false,
-        padding	:	0,
-	    helpers:  {
-	        overlay : {
-	            css : {
-	                'background' : 'rgba(0,0,0,0.8)'
-	            }
-	        }
-	    }
-	});
-*/
-	
-});
-$(document).keypress(function(e){
-
-});
-$(window).load(function(){
-	$('body').addClass('loaded');
 });
